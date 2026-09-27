@@ -1,0 +1,331 @@
+/* =========================
+   Base
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Arial,
+        sans-serif;
+
+    color: #111;
+    background: #f7f7f5;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(247, 247, 245, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+    width: min(1200px, calc(100% - 48px));
+    height: 80px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   Page Header
+========================= */
+
+.page-header {
+    padding: 120px 0 100px;
+
+    background: #111;
+    color: #fff;
+}
+
+.page-label {
+    margin-bottom: 24px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    opacity: 0.6;
+}
+
+.page-header h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+}
+
+.page-description {
+    max-width: 560px;
+
+    margin-top: 36px;
+
+    color: #aaa;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Legal Information
+========================= */
+
+.legal-section {
+    padding: 100px 0;
+}
+
+.legal-list {
+    border-top: 1px solid #ccc;
+}
+
+.legal-item {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.legal-title {
+    padding: 28px 24px;
+
+    background: #ededeb;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.legal-content {
+    padding: 28px 32px;
+
+    background: #fff;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Back Link
+========================= */
+
+.back-section {
+    padding: 0 0 120px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #111;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+    opacity: 0.5;
+}
+
+.back-link span {
+    font-size: 20px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    background: #111;
+    color: #fff;
+
+    padding: 60px 0 32px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid #333;
+}
+
+.footer-logo {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-nav a {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 24px;
+
+    color: #777;
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 32px, 1100px);
+    }
+
+    .header-inner {
+        width: calc(100% - 32px);
+        height: 68px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .page-header {
+        padding: 80px 0 70px;
+    }
+
+    .page-header h1 {
+        font-size: 44px;
+    }
+
+    .legal-section {
+        padding: 60px 0;
+    }
+
+    .legal-item {
+        display: block;
+    }
+
+    .legal-title {
+        padding: 16px 20px;
+    }
+
+    .legal-content {
+        padding: 20px;
+    }
+
+    .back-section {
+        padding-bottom: 80px;
+    }
+
+    .footer-top {
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    .footer-nav {
+        margin-top: 32px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        display: block;
+    }
+
+    .footer-bottom a {
+        display: inline-block;
+        margin-top: 12px;
+    }
+}
